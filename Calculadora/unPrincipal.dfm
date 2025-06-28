@@ -65,6 +65,7 @@ object Form1: TForm1
     Height = 25
     Caption = '-'
     TabOrder = 3
+    OnClick = btSubtrairClick
   end
   object btMultiplicar: TButton
     Left = 147
@@ -73,6 +74,7 @@ object Form1: TForm1
     Height = 25
     Caption = '*'
     TabOrder = 4
+    OnClick = btMultiplicarClick
   end
   object btDividir: TButton
     Left = 197
@@ -81,6 +83,7 @@ object Form1: TForm1
     Height = 25
     Caption = '/'
     TabOrder = 5
+    OnClick = btDividirClick
   end
   object txtResultado: TEdit
     Left = 47

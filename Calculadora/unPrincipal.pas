@@ -19,6 +19,9 @@ type
     Label3: TLabel;
     txtResultado: TEdit;
     procedure btSomarClick(Sender: TObject);
+    procedure btSubtrairClick(Sender: TObject);
+    procedure btMultiplicarClick(Sender: TObject);
+    procedure btDividirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,14 +35,46 @@ implementation
 
 {$R *.dfm}
 
+// Evento somar
 procedure TForm1.btSomarClick(Sender: TObject);
 var
-  num1, num2, resultado: Integer;
+  num1, num2, resultado: Real;
 begin
-  num1 := StrToInt(txtNum1.Text);
-  num2 := StrToInt(txtNum1.Text);
+  num1 := StrToFloat(txtNum1.Text);
+  num2 := StrToFloat(txtNum2.Text);
   resultado := num1+num2;
-  txtResultado.Text := IntToStr(resultado);
+  txtResultado.Text := FloatToStr(resultado);
+end;
+
+// Evento Subtrair
+procedure TForm1.btSubtrairClick(Sender: TObject);
+var num1, num2, resultado: Real;
+begin
+  num1 := StrToFloat(txtNum1.Text);
+  num2 := StrToFloat(txtNum2.Text);
+  resultado := num1-num2;
+  txtResultado.Text := FloatToStr(resultado);
+end;
+
+// Evento multiplicar
+procedure TForm1.btMultiplicarClick(Sender: TObject);
+var num1, num2, resultado: Real;
+begin
+  num1 := StrToFloat(txtNum1.Text);
+  num2 := StrToFloat(txtNum2.Text);
+  resultado := num1*num2;
+  txtResultado.Text := FloatToStr(resultado);
+end;
+
+// Evento dibidir
+procedure TForm1.btDividirClick(Sender: TObject);
+var num1, num2: Real;
+var resultado: Real;
+begin
+  num1 := StrToFloat(txtNum1.Text);
+  num2 := StrToFloat(txtNum2.Text);
+  resultado := num1/num2;
+  txtResultado.Text := FloatToStr(resultado);
 end;
 
 end.

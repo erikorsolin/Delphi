@@ -6,7 +6,7 @@ object Form1: TForm1
   Caption = 'Calculadora'
   ClientHeight = 315
   ClientWidth = 297
-  Color = clBtnFace
+  Color = clDarkseagreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -49,22 +49,13 @@ object Form1: TForm1
     Height = 23
     TabOrder = 1
   end
-  object btSomar: TButton
-    Left = 47
-    Top = 166
-    Width = 44
-    Height = 25
-    Caption = '+'
-    TabOrder = 2
-    OnClick = btSomarClick
-  end
   object btSubtrair: TButton
     Left = 97
     Top = 166
     Width = 44
     Height = 25
     Caption = '-'
-    TabOrder = 3
+    TabOrder = 2
     OnClick = btSubtrairClick
   end
   object btMultiplicar: TButton
@@ -73,7 +64,7 @@ object Form1: TForm1
     Width = 44
     Height = 25
     Caption = '*'
-    TabOrder = 4
+    TabOrder = 3
     OnClick = btMultiplicarClick
   end
   object btDividir: TButton
@@ -82,7 +73,7 @@ object Form1: TForm1
     Width = 44
     Height = 25
     Caption = '/'
-    TabOrder = 5
+    TabOrder = 4
     OnClick = btDividirClick
   end
   object txtResultado: TEdit
@@ -90,6 +81,16 @@ object Form1: TForm1
     Top = 240
     Width = 193
     Height = 23
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object Button1: TButton
+    Left = 48
+    Top = 166
+    Width = 43
+    Height = 25
+    Caption = '+'
     TabOrder = 6
+    OnClick = btSomarClick
   end
 end
